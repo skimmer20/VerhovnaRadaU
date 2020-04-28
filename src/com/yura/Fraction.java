@@ -53,7 +53,7 @@ public class Fraction {
     }
 
         //видалити депутата
-        public void removeDeputat() {
+        public void removeDeputat() throws MyEmptyListException {
             System.out.println("Which deputat should be removed? (lastName)");
             String lastName = scanner.nextLine();
                 deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
@@ -68,6 +68,7 @@ public class Fraction {
                  }
              }
         }
+
         //найбільший хабарник
         public void getMaxHabarnyk(){
                  Deputat maxValue = Collections.max(deputatList,

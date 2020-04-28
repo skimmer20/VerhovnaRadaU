@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcdb071e-04bb-4a5b-9d6a-e5ef890879b1" name="Default Changelist" comment="">
+    <list default="true" id="bcdb071e-04bb-4a5b-9d6a-e5ef890879b1" name="Default Changelist" comment="add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Deputat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Deputat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Fraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/MyEmptyListException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/MyEmptyListException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Rada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Rada.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,11 +78,24 @@
       <option name="presentableId" value="Default" />
       <updated>1587899045954</updated>
       <workItem from="1587899047216" duration="12026000" />
-      <workItem from="1588064484096" duration="3808000" />
+      <workItem from="1588064484096" duration="4184000" />
+      <workItem from="1588070342114" duration="717000" />
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1588069252833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588069252840</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
 </project>

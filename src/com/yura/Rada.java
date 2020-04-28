@@ -43,30 +43,24 @@ public class Rada {
         System.out.println("Add deputat to Fraction");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        Iterator<Fraction> iterator = fractionList.iterator();
-        while (iterator.hasNext()){
-            Fraction fraction = iterator.next();
-            if (fraction.getNameFraction().equals(name)){
+        for (Fraction fraction : fractionList) {
+            if (fraction.getNameFraction().equals(name)) {
                 fraction.addDeputat();
             }
         }
     }
 
     //видалити депутата з фракції
-    public void removeDeputatFromFraction(){
+    public void removeDeputatFromFraction() throws MyEmptyListException{
         System.out.println("Delete deputat from Fraction");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        Iterator<Fraction> iterator = fractionList.iterator();
-        while (iterator.hasNext()) {
-            Fraction fraction = iterator.next();
+        for (Fraction fraction : fractionList) {
             if (fraction.getNameFraction().equals(name)) {
                 fraction.removeDeputat();
             }
         }
     }
-
-    //показати хабарників фракції
 
 
 
