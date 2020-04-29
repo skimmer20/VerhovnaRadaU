@@ -3,8 +3,8 @@ package com.yura;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Fraction {
@@ -12,6 +12,9 @@ public class Fraction {
     private List<Deputat> deputatList = new ArrayList<>();
 
     private Scanner scanner = new Scanner(System.in);
+
+    public Fraction() {
+    }
 
     public Fraction(String nameFraction) {
         this.nameFraction = nameFraction;
@@ -52,41 +55,75 @@ public class Fraction {
         deputatList.add(new Deputat(weight, height, name, lastName, age, habarnyk, havarValue));
     }
 
-        //видалити депутата
-        public void removeDeputat() throws MyEmptyListException {
-            System.out.println("Which deputat should be removed? (lastName)");
-            String lastName = scanner.nextLine();
-                deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
-            //    if (deputatList.equals(lastName))
+    //видалити депутата
+    public void removeDeputat() {
+        System.out.println("Which deputat should be removed? (lastName)");
+        String lastName = scanner.nextLine();
+        deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
+    }
 
+    //дати хабаря
+    public void giveHabarToDeputat() {
+        System.out.println("Give a habar (lastName)");
+        String lastName = scanner.nextLine();
+        for (Deputat deputat : deputatList) {
+            if (deputat.getLastName().equals(lastName)) {
+                deputat.giveHabar();
+            }
         }
-        //видалити хабарника
-        public void removeHabarnykiv(){
-             for (Deputat deputats: deputatList) {
-                 if (deputats.getHavarValue() > 0){
-                     deputatList.remove(deputats);
-                 }
-             }
+    }
+
+    //показати хабарника
+    public void getHabarnyk() {
+        try {
+            for (Deputat deputat : deputatList) {
+                if (deputat.isHabarnyk()) {
+                    System.out.println(deputat);
+                    getAllDeputats();
+                }
+            }
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //найбільший хабарник
+    public void getMaxHabarnyk() {
+        try {
+            Deputat maxValue = Collections.max(deputatList,
+                    Comparator.comparing(Deputat::getHavarValue));
+            System.out.println("The most habarnyk is " + maxValue.getLastName());
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
         }
 
-        //найбільший хабарник
-        public void getMaxHabarnyk(){
-                 Deputat maxValue = Collections.max(deputatList,
-                         Comparator.comparing(Deputat::getHavarValue));
-             System.out.println("The most habarnyk is " + maxValue.getLastName());
-         }
+    }
 
-        //показати всіх депутатів
-        public void getAllDeputats(){
-         deputatList.forEach(System.out::println);
+    //видалити хабарника
+    public void removeHabarnykiv() {
+        for (Deputat deputat : deputatList) {
+            if (deputat.getHavarValue() > 0) {
+                deputatList.remove(deputat);
+            }
         }
-        //видалити всіх
-        public void removeAll(){
-            deputatList.removeAll(deputatList);
-            System.out.println("Rada is empty");
-        }
+    }
 
-        //загальна сума хабарів для фракції
+    //показати всіх депутатів
+    public void getAllDeputats() {
+        deputatList.forEach(System.out::println);
+    }
+
+    //видалити всіх
+    public void removeAllDeputats() {
+        for (Deputat deputat : deputatList) {
+            if (deputatList.contains(deputat)) {
+                deputatList.removeAll(deputatList);
+            }
+        }
+        System.out.println("Rada is empty");
+    }
+
+    //загальна сума хабарів для фракції
         /*public void habarSum(){
             Deputat sumHabar = Collections.;
         }*/

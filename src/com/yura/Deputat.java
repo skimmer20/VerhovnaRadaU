@@ -76,21 +76,21 @@ public class Deputat extends Human {
                 " height " + getHeight() +
                 '}';
     }
+
     /**
-     * Method shows Habarykiv
+     * Method gets habar
      */
     public void giveHabar() {
         if (!habarnyk) {
             System.out.println("Slava Ukraine");
-        }else {
+        } else {
             Scanner scanner = new Scanner(System.in);
             int sum = scanner.nextInt();
-            if (sum >= 10000){
+            if (sum >= 10000) {
                 System.out.println("Go to jail!");
-            }else {
+            } else {
                 havarValue += sum;
             }
         }
     }
-
 }
