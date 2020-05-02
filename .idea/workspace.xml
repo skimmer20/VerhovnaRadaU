@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Deputat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Deputat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Fraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Fraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Human.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yura/Deputat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Deputat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yura/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Fraction.java" afterDir="false" />
@@ -81,7 +80,9 @@
       <updated>1587899045954</updated>
       <workItem from="1587899047216" duration="12026000" />
       <workItem from="1588064484096" duration="4184000" />
-      <workItem from="1588070342114" duration="13342000" />
+      <workItem from="1588070342114" duration="15799000" />
+      <workItem from="1588249785420" duration="3712000" />
+      <workItem from="1588422798448" duration="3673000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1588069252833</created>
@@ -104,15 +105,36 @@
       <option name="project" value="LOCAL" />
       <updated>1588073740413</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="program is usable, still need some improvement">
+      <created>1588162141439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588162141439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add" />
     <MESSAGE value="add .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore file" />
+    <MESSAGE value="program is usable, still need some improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="program is usable, still need some improvement" />
   </component>
 </project>

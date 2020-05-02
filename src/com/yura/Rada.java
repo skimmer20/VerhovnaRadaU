@@ -4,35 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Rada {
+class Rada {
 
-    private List<Fraction> fractionList = new ArrayList<>();
+    private static List<Fraction> fractionList = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
-    public Rada() {
+    Rada() {
     }
 
     //створити фракцію
-    public void addFruction() {
+    void addFruction() {
         System.out.println("Name of fraction to ADD?");
         String name = scanner.nextLine();
         fractionList.add(new Fraction(name));
     }
 
     //видалити фракцію
-    public void removeFraction() {
+    void removeFraction() {
         System.out.println("Name of fraction to DEL?");
         String name = scanner.nextLine();
         fractionList.removeIf(fraction -> fraction.getNameFraction().equals(name));
     }
 
     //показати всі фракції
-    public void getAllFractions() {
+    void getAllFractions() {
         fractionList.forEach(System.out::println);
     }
 
     //вивести конкректну фракцію
-    public void getFractionName() {
+    void getFractionName() {
         System.out.println("Which fraction would you like to see?");
         String name = scanner.nextLine();
         //fractionList.forEach(fraction -> fraction.getNameFraction().equals(name));
@@ -44,8 +44,8 @@ public class Rada {
     }
 
     //додати депутата до фракції
-    public void addDeputatIntoFraction() {
-        System.out.println("Add deputat to Fraction. ");
+    void addDeputatIntoFraction() {
+        System.out.println("Add deputat to Fraction. Enter name of Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
             if (fraction.getNameFraction().equals(name)) {
@@ -55,7 +55,7 @@ public class Rada {
     }
 
     //видалити депутата з фракції
-    public void removeDeputatFromFraction() throws MyEmptyListException {
+    void removeDeputatFromFraction() {
         System.out.println("Delete deputat from Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
@@ -67,7 +67,7 @@ public class Rada {
     }
 
     //дати хабаря депутату
-    public void giveHabarToDeputat() {
+    void giveHabarToDeputat() {
         System.out.println("Give a habar to Deputat from Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
@@ -78,7 +78,7 @@ public class Rada {
     }
 
     //показати хабарників фракції
-    public void getHabarnykInFraction() {
+    void getHabarnykInFraction() {
         System.out.println("Show habarnykiv in Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
@@ -89,7 +89,7 @@ public class Rada {
     }
 
     //показати найбільшого хабарника у фракції
-    public void getMaxHabarnykInFraction() {
+    void getMaxHabarnykInFraction() {
         System.out.println("Get the biggest habarnyk from Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
@@ -100,14 +100,14 @@ public class Rada {
     }
 
     //показати найбільшого хабарника у Раді
-    public void getMaxHabarnykInRada() {
+    void getMaxHabarnykInRada() {
         for (Fraction fraction : fractionList) {
             fraction.getMaxHabarnyk();
         }
     }
 
     //видалити хабарника з фракції
-    public void removeMaxHabarnyk() {
+    void removeMaxHabarnyk() {
         System.out.println("Remove the biggest habarnyk from Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {
@@ -118,7 +118,7 @@ public class Rada {
     }
 
     //видалити всіх депутатів з фракції
-    public void removeAllDeputatsFromFraction() {
+    void removeAllDeputatsFromFraction() {
         System.out.println("Remove all deputats from Fraction");
         String name = scanner.nextLine();
         for (Fraction fraction : fractionList) {

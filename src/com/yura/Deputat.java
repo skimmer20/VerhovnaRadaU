@@ -7,19 +7,18 @@ public class Deputat extends Human {
     private String lastName;
     private int age;
     private boolean habarnyk;
-    private int havarValue;
+    private int habarValue;
 
     public Deputat() {
         super();
     }
 
-    public Deputat(double weight, double height, String name, String lastName, int age, boolean habarnyk, int havarValue) {
+    public Deputat(double weight, double height, String name, String lastName, int age, boolean habarnyk) {
         super(weight, height);
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.habarnyk = habarnyk;
-        this.havarValue = havarValue;
         this.getHeight();
         this.getWeight();
     }
@@ -57,11 +56,11 @@ public class Deputat extends Human {
     }
 
     public int getHavarValue() {
-        return havarValue;
+        return habarValue;
     }
 
-    public void setHavarValue(int havarValue) {
-        this.havarValue = havarValue;
+    public void setHaBarValue(int havarValue) {
+        this.habarValue = havarValue;
     }
 
     @Override
@@ -71,7 +70,7 @@ public class Deputat extends Human {
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", habarnyk=" + habarnyk +
-                ", havarValue=" + havarValue +
+                ", havarValue=" + habarValue +
                 " weight " + getWeight() +
                 " height " + getHeight() +
                 '}';
@@ -80,8 +79,8 @@ public class Deputat extends Human {
     /**
      * Method gets habar
      */
-    public void giveHabar() {
-        if (!habarnyk) {
+    public boolean giveHabar() {
+        if (isHabarnyk()) {
             System.out.println("Slava Ukraine");
         } else {
             Scanner scanner = new Scanner(System.in);
@@ -89,8 +88,10 @@ public class Deputat extends Human {
             if (sum >= 10000) {
                 System.out.println("Go to jail!");
             } else {
-                havarValue += sum;
+                habarValue += sum;
+                System.out.println(habarValue);
             }
         }
+        return habarnyk;
     }
 }

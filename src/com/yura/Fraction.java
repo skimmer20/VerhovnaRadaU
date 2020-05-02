@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Fraction {
     private String nameFraction;
-    private List<Deputat> deputatList = new ArrayList<>();
+    private static List<Deputat> deputatList = new ArrayList<>();
 
     private Scanner scanner = new Scanner(System.in);
 
@@ -43,23 +43,30 @@ public class Fraction {
         String lastName = scanner.nextLine();
         System.out.println("age");
         int age = scanner.nextInt();
-        System.out.println("habarnyk?");
+        System.out.println("habarnyk? - Enter true or false!");
         boolean habarnyk = scanner.nextBoolean();
-        System.out.println("havarValue");
-        int havarValue = scanner.nextInt();
+//        if (habarnyk) {
+//            Deputat deputat = new Deputat();
+//            deputat.giveHabar();
+//        }
         System.out.println("weight");
         double weight = scanner.nextInt();
         System.out.println("height");
         double height = scanner.nextInt();
         System.out.println();
-        deputatList.add(new Deputat(weight, height, name, lastName, age, habarnyk, havarValue));
+        //Deputat deputat = new Deputat();
+        deputatList.add(new Deputat(weight, height, name, lastName, age, habarnyk));
     }
 
     //видалити депутата
     public void removeDeputat() {
         System.out.println("Which deputat should be removed? (lastName)");
         String lastName = scanner.nextLine();
-        deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
+        try {
+            deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
+        } catch (NoSuchElementException e) {
+            System.out.println("There is no such Deputat");
+        }
     }
 
     //дати хабаря
@@ -92,25 +99,32 @@ public class Fraction {
         try {
             Deputat maxValue = Collections.max(deputatList,
                     Comparator.comparing(Deputat::getHavarValue));
-            System.out.println("The most habarnyk is " + maxValue.getLastName());
+            System.out.println("The biggest habarnyk is " + maxValue.getLastName());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
         }
-
     }
 
     //видалити хабарника
     public void removeHabarnykiv() {
-        for (Deputat deputat : deputatList) {
-            if (deputat.getHavarValue() > 0) {
-                deputatList.remove(deputat);
+        try {
+            for (Deputat deputat : deputatList) {
+                if (deputat.getHavarValue() > 0) {
+                    deputatList.remove(deputat);
+                }
             }
+        } catch (NoSuchElementException e) {
+            System.out.println("There is no habarnyk");
         }
     }
 
     //показати всіх депутатів
     public void getAllDeputats() {
-        deputatList.forEach(System.out::println);
+        try {
+            deputatList.forEach(System.out::println);
+        } catch (NoSuchElementException e) {
+            System.out.println("List is empty");
+        }
     }
 
     //видалити всіх
@@ -122,10 +136,4 @@ public class Fraction {
         }
         System.out.println("Rada is empty");
     }
-
-    //загальна сума хабарів для фракції
-        /*public void habarSum(){
-            Deputat sumHabar = Collections.;
-        }*/
-
 }
