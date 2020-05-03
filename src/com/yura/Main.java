@@ -122,7 +122,6 @@ public class Main {
                             default:
                                 System.out.println("Такої функції не існує");
                         }
-
                         break;
                     case 3:
                         System.out.println("1 - Дати хабар депутату \n" +

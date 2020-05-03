@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class Fraction {
     private String nameFraction;
     private static List<Deputat> deputatList = new ArrayList<>();
-
     private Scanner scanner = new Scanner(System.in);
 
     public Fraction() {

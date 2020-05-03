@@ -73,7 +73,6 @@ public class Deputat extends Human {
                 " height " + getHeight() +
                 '}';
     }
-
     /**
      * Method gets habar
      */
