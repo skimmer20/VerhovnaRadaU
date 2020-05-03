@@ -2,6 +2,7 @@ package com.yura;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 class Rada {
@@ -23,12 +24,18 @@ class Rada {
     void removeFraction() {
         System.out.println("Name of fraction to DEL?");
         String name = scanner.nextLine();
-        fractionList.removeIf(fraction -> fraction.getNameFraction().equals(name));
+        try {
+            fractionList.removeIf(fraction -> fraction.getNameFraction().equals(name));
+        }catch (NoSuchElementException e){
+            System.out.println("Такої фракції не існує.");
+        }
     }
 
     //показати всі фракції
     void getAllFractions() {
-        fractionList.forEach(System.out::println);
+        for (Fraction fraction : fractionList){
+            System.out.println(fraction.getNameFraction());
+        }
     }
 
     //вивести конкректну фракцію

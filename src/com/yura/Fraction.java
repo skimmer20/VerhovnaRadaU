@@ -3,6 +3,7 @@ package com.yura;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -45,36 +46,33 @@ public class Fraction {
         int age = scanner.nextInt();
         System.out.println("habarnyk? - Enter true or false!");
         boolean habarnyk = scanner.nextBoolean();
-//        if (habarnyk) {
-//            Deputat deputat = new Deputat();
-//            deputat.giveHabar();
-//        }
         System.out.println("weight");
         double weight = scanner.nextInt();
         System.out.println("height");
         double height = scanner.nextInt();
         System.out.println();
-        //Deputat deputat = new Deputat();
         deputatList.add(new Deputat(weight, height, name, lastName, age, habarnyk));
     }
 
     //видалити депутата
     public void removeDeputat() {
-        System.out.println("Which deputat should be removed? (lastName)");
+        System.out.println("Which deputat should be removed? (FirstName)");
+        String firstName = scanner.nextLine();
+        System.out.println("LastName");
         String lastName = scanner.nextLine();
-        try {
-            deputatList.removeIf(deputat -> deputat.getLastName().equals(lastName));
-        } catch (NoSuchElementException e) {
-            System.out.println("There is no such Deputat");
-        }
+        deputatList.removeIf(deputat -> deputat.getLastName().equals(firstName)
+                && deputat.getLastName().equals(lastName));
     }
 
     //дати хабаря
     public void giveHabarToDeputat() {
-        System.out.println("Give a habar (lastName)");
+        System.out.println("Give a habar (Enter FirstName)");
+        String firstName = scanner.nextLine();
+        System.out.println("LastName");
         String lastName = scanner.nextLine();
+        System.out.println("Sum");
         for (Deputat deputat : deputatList) {
-            if (deputat.getLastName().equals(lastName)) {
+            if (deputat.getName().equals(firstName) && deputat.getLastName().equals(lastName)) {
                 deputat.giveHabar();
             }
         }
@@ -86,7 +84,6 @@ public class Fraction {
             for (Deputat deputat : deputatList) {
                 if (deputat.isHabarnyk()) {
                     System.out.println(deputat);
-                    getAllDeputats();
                 }
             }
         } catch (NoSuchElementException e) {
@@ -97,9 +94,11 @@ public class Fraction {
     //найбільший хабарник
     public void getMaxHabarnyk() {
         try {
-            Deputat maxValue = Collections.max(deputatList,
+            Deputat deputat = Collections.max(deputatList,
                     Comparator.comparing(Deputat::getHavarValue));
-            System.out.println("The biggest habarnyk is " + maxValue.getLastName());
+            if (deputat.isHabarnyk()){
+                System.out.println("The biggest habarnyk is " + deputat.getName() + " " + deputat.getLastName());
+            }
         } catch (NoSuchElementException e) {
             e.printStackTrace();
         }
@@ -109,11 +108,11 @@ public class Fraction {
     public void removeHabarnykiv() {
         try {
             for (Deputat deputat : deputatList) {
-                if (deputat.getHavarValue() > 0) {
+                if (deputat.getHavarValue() > 0 || deputat.isHabarnyk()) {
                     deputatList.remove(deputat);
                 }
             }
-        } catch (NoSuchElementException e) {
+        } catch (ConcurrentModificationException e) {
             System.out.println("There is no habarnyk");
         }
     }

@@ -82,7 +82,7 @@
       <workItem from="1588064484096" duration="4184000" />
       <workItem from="1588070342114" duration="15799000" />
       <workItem from="1588249785420" duration="3712000" />
-      <workItem from="1588422798448" duration="3673000" />
+      <workItem from="1588422798448" duration="12351000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1588069252833</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588162141439</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added exception statements, fixed some bugs">
+      <created>1588427796648</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588427796648</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +142,7 @@
     <MESSAGE value="add" />
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="program is usable, still need some improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="program is usable, still need some improvement" />
+    <MESSAGE value="added exception statements, fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exception statements, fixed some bugs" />
   </component>
 </project>

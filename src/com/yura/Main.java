@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws MyEmptyListException {
+    public static void main(String[] args) {
 
         while (true) {
             System.out.println("Welcome to Rada! Куди бажаєте перейти? \n" +
@@ -31,7 +31,7 @@ public class Main {
                                         "10 - Показати найбільшого хабарника у Раді \n" +
                                         "11 - Видалити хабарника з фракції \n" +
                                         "12 - Видалити всіх депутатів з фракції \n" +
-                                        "0 - Вихід з програми");
+                                        "13 - Повернутись в попереднє меню");
                         int choose1 = new Scanner(System.in).nextInt();
                         Rada rada = new Rada();
                         switch (choose1) {
@@ -73,8 +73,7 @@ public class Main {
                                 rada.removeAllDeputatsFromFraction();
                                 break;
                             case 13:
-                                System.out.println("Повернутись в попереднє меню");
-                                return;
+                                break;
                             default:
                                 System.out.println("Такої функції не існує");
                         }
@@ -89,7 +88,8 @@ public class Main {
                                         "5 - Показати найбільшого хабарника \n" +
                                         "6 - Видалити хабарників \n" +
                                         "7 - Показати всіх депутатів \n" +
-                                        "0 - Вихід з програми");
+                                        "8 - Видалити всіх депутатів \n" +
+                                        "9 - Повернутись в попереднє меню");
                         int choose2 = new Scanner(System.in).nextInt();
                         Fraction fraction = new Fraction();
                         switch (choose2) {
@@ -118,8 +118,7 @@ public class Main {
                                 fraction.removeAllDeputats();
                                 break;
                             case 9:
-                                System.out.println("Повернутись в попереднє меню");
-                                return;
+                                break;
                             default:
                                 System.out.println("Такої функції не існує");
                         }
@@ -127,7 +126,7 @@ public class Main {
                         break;
                     case 3:
                         System.out.println("1 - Дати хабар депутату \n" +
-                                "2 - Вихід з програми");
+                                "2 - Повернутись в попереднє меню");
                         int choose3 = new Scanner(System.in).nextInt();
                         Deputat deputat = new Deputat();
                         switch (choose3) {
@@ -136,8 +135,7 @@ public class Main {
                                 deputat.giveHabar();
                                 break;
                             case 2:
-                                System.out.println("Повернутись в попереднє меню");
-                                return;
+                                break;
                             default:
                                 System.out.println("Такої функції не існує");
                         }

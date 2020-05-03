@@ -3,7 +3,7 @@ package com.yura;
 import java.util.Scanner;
 
 public class Deputat extends Human {
-    private String name;
+    private String firstName;
     private String lastName;
     private int age;
     private boolean habarnyk;
@@ -13,22 +13,20 @@ public class Deputat extends Human {
         super();
     }
 
-    public Deputat(double weight, double height, String name, String lastName, int age, boolean habarnyk) {
+    public Deputat(double weight, double height, String firstName, String lastName, int age, boolean habarnyk) {
         super(weight, height);
-        this.name = name;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.habarnyk = habarnyk;
-        this.getHeight();
-        this.getWeight();
     }
 
     public String getName() {
-        return name;
+        return firstName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstName = name;
     }
 
     public String getLastName() {
@@ -47,7 +45,7 @@ public class Deputat extends Human {
         this.age = age;
     }
 
-    public boolean isHabarnyk() {
+    boolean isHabarnyk() {
         return habarnyk;
     }
 
@@ -55,7 +53,7 @@ public class Deputat extends Human {
         this.habarnyk = habarnyk;
     }
 
-    public int getHavarValue() {
+    int getHavarValue() {
         return habarValue;
     }
 
@@ -66,7 +64,7 @@ public class Deputat extends Human {
     @Override
     public String toString() {
         return "Deputat{" +
-                "name='" + name + '\'' +
+                "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", habarnyk=" + habarnyk +
@@ -79,12 +77,11 @@ public class Deputat extends Human {
     /**
      * Method gets habar
      */
-    public boolean giveHabar() {
-        if (isHabarnyk()) {
+     void giveHabar() {
+        if (!isHabarnyk()) {
             System.out.println("Slava Ukraine");
         } else {
-            Scanner scanner = new Scanner(System.in);
-            int sum = scanner.nextInt();
+            int sum = new Scanner(System.in).nextInt();
             if (sum >= 10000) {
                 System.out.println("Go to jail!");
             } else {
@@ -92,6 +89,5 @@ public class Deputat extends Human {
                 System.out.println(habarValue);
             }
         }
-        return habarnyk;
     }
 }
