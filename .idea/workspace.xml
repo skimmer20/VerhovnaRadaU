@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcdb071e-04bb-4a5b-9d6a-e5ef890879b1" name="Default Changelist" comment="fixed some bugs">
-      <change afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Rada.class" afterDir="false" />
+    <list default="true" id="bcdb071e-04bb-4a5b-9d6a-e5ef890879b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yura/Deputat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Deputat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Deputat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Deputat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Fraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Fraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Rada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VerhovnaRada/com/yura/Rada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yura/Rada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yura/Rada.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +80,8 @@
       <workItem from="1588064484096" duration="4184000" />
       <workItem from="1588070342114" duration="15799000" />
       <workItem from="1588249785420" duration="3712000" />
-      <workItem from="1588422798448" duration="12638000" />
+      <workItem from="1588422798448" duration="13059000" />
+      <workItem from="1588594636648" duration="2948000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1588069252833</created>
@@ -121,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588512662004</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed some bugs">
+      <created>1588512970020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588512970020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

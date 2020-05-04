@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Rada {
 
@@ -33,9 +35,10 @@ class Rada {
 
     //показати всі фракції
     void getAllFractions() {
-        for (Fraction fraction : fractionList){
-            System.out.println(fraction.getNameFraction());
-        }
+        Stream<Fraction> stream = fractionList.stream();
+        List<String> stringList =  stream.map(Fraction::getNameFraction)
+                .collect(Collectors.toList());
+        System.out.println(stringList);
     }
 
     //вивести конкректну фракцію
